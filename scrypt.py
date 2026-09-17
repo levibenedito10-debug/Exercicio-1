@@ -10,3 +10,8 @@ lista = [
     (259, 'Ursula'), (261, 'Victor'), (269, 'Wesley'), (273, 'Xênia'), (278, 'Yasmin'),
     (280, 'Zeca'), (288, 'Alana'), (291, 'Caio'), (292, 'Diana'), (294, 'Fábio')
 ]
+
+def pesquisa_binaria(lista, numero):
+    baixo = 0
+    alto = len(lista) - 1
+    tentativas = 0
