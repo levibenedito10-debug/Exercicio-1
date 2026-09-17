@@ -15,3 +15,23 @@ def pesquisa_binaria(lista, numero):
     baixo = 0
     alto = len(lista) - 1
     tentativas = 0
+
+    while baixo <= alto:
+        meio = (baixo + alto) // 2
+        tentativas += 1
+
+        if lista[meio][0] == numero:
+            return lista[meio][1], tentativas
+
+        elif lista[meio][0] < numero:
+            baixo = meio + 1
+
+        else:
+            alto = meio - 1
+
+    return None, tentativas
+
+nome, tentativas = pesquisa_binaria(lista, 256)
+
+print("O nome associado ao número 256 é:", nome)
+print("Foram feitas", tentativas, "tentativas na pesquisa binária.")
